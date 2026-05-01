@@ -3,6 +3,7 @@
 
 import { useState, useEffect, useRef, FormEvent } from 'react';
 import { useRouter, useParams, usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 export default function Home() {
   const router = useRouter();
@@ -77,12 +78,8 @@ export default function Home() {
     <>
       <nav id="navbar" className={isScrolled ? 'scrolled' : ''}>
         <div className="nav-inner">
-          <a href="#hero" className="logo" onClick={(e) => scrollToSection(e, '#hero')}>
-            <div className="logo-mark">P&L</div>
-            <div className="logo-text">
-              <div className="logo-name">{t('피엔엘솔루션(주)', 'P&Lソリューション')}</div>
-              <div className="logo-sub">P&L Solution Co., Ltd.</div>
-            </div>
+          <a href="#hero" className="logo" onClick={(e) => scrollToSection(e, '#hero')} style={{ display: 'flex', alignItems: 'center' }}>
+            <Image src="/images/logo.png" alt="P&L Solution" width={240} height={60} style={{ objectFit: 'contain', height: '40px', width: 'auto' }} priority />
           </a>
 
           <ul className="nav-links" id="navLinks">
@@ -646,8 +643,9 @@ export default function Home() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <div className="footer-logo-name">{t('피엔엘솔루션(주)', 'P&Lソリューション株式会社')}</div>
-              <div className="footer-logo-sub">P&L Solution Co., Ltd.</div>
+              <div style={{ marginBottom: '16px' }}>
+                <Image src="/images/logo.png" alt="P&L Solution" width={240} height={60} style={{ objectFit: 'contain', height: '48px', width: 'auto' }} />
+              </div>
               <div className="footer-tagline">{th('IT 인프라의 설계부터 운영까지,<br>기업의 안정적인 비즈니스를 지원합니다.', 'ITインフラの設計から運用まで、<br>企業の安定したビジネスを支援します。')}</div>
             </div>
 

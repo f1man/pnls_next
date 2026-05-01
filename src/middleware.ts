@@ -15,7 +15,15 @@ export function middleware(request: NextRequest) {
 
   // Detect preferred language from headers
   const acceptLang = request.headers.get('accept-language') || '';
-  const preferredLocale = acceptLang.includes('ja') ? 'ja' : 'ko';
+  
+  const jaIndex = acceptLang.indexOf('ja');
+  const koIndex = acceptLang.indexOf('ko');
+  
+  let preferredLocale = 'ko'; // default to Korean
+  // If Japanese is present, and either Korean is missing or Japanese has higher priority (appears first)
+  if (jaIndex !== -1 && (koIndex === -1 || jaIndex < koIndex)) {
+    preferredLocale = 'ja';
+  }
 
   // Redirect to localized path
   request.nextUrl.pathname = `/${preferredLocale}${pathname}`;

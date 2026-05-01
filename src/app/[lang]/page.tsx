@@ -444,7 +444,7 @@ export default function Home() {
                 <div className="case-desc">{t('공공기관의 엄격한 보안 요건을 충족하는 클라우드 전환 컨설팅을 제공하고, 무중단 마이그레이션을 성공적으로 완수했습니다.', '公共機関の厳しいセキュリティ要件を満たすクラウド移行コンサルティングを提供し、無停止での移行を成功裏に完了しました。')}</div>
                 <div className="case-results">
                   <div className="case-result">
-                    <div className="case-result-val">0<span>초</span></div>
+                    <div className="case-result-val">0<span>{t('초', '秒')}</span></div>
                     <div className="case-result-label">{t('서비스 중단 시간', 'サービスダウンタイム')}</div>
                   </div>
                   <div className="case-result">
@@ -465,11 +465,11 @@ export default function Home() {
                 <div className="case-desc">{t('한일 양국 사용자가 원활하게 소통할 수 있도록 다국어 지원 및 최적화된 UI/UX를 갖춘 커뮤니티 플랫폼을 구축했습니다.', '日韓両国のユーザーが円滑にコミュニケーションできるよう、多言語対応と最適化されたUI/UXを備えたコミュニティプラットフォームを構築しました。')}</div>
                 <div className="case-results">
                   <div className="case-result">
-                    <div className="case-result-val">2<span>개국어</span></div>
+                    <div className="case-result-val">2<span>{t('개국어', 'ヶ国語')}</span></div>
                     <div className="case-result-label">{t('완벽 지원', '完全対応')}</div>
                   </div>
                   <div className="case-result">
-                    <div className="case-result-val">2배<span></span></div>
+                    <div className="case-result-val">2<span>{t('배', '倍')}</span></div>
                     <div className="case-result-label">{t('접속 속도 향상', 'アクセス速度向上')}</div>
                   </div>
                 </div>
@@ -490,7 +490,7 @@ export default function Home() {
                     <div className="case-result-label">{t('무중단 아키텍처', '無停止アーキテクチャ')}</div>
                   </div>
                   <div className="case-result">
-                    <div className="case-result-val">3<span>배</span></div>
+                    <div className="case-result-val">3<span>{t('배', '倍')}</span></div>
                     <div className="case-result-label">{t('처리량 증가', 'スループット向上')}</div>
                   </div>
                 </div>
@@ -546,7 +546,7 @@ export default function Home() {
 
               <div className="japan-cta-card">
                 <div className="japan-cta-label">{t('일본 비즈니스 전담 문의', '日本ビジネス専任お問い合わせ')}</div>
-                <div className="japan-cta-value">jp@pnls.co.kr</div>
+                <div className="japan-cta-value">sales@pnls.co.kr</div>
                 <div className="japan-cta-sub">{t('한국어 / 일본어 동시 지원', '韓国語 / 日本語 同時対応')}</div>
                 <a href="#contact" className="btn-primary" style={{display: "inline-flex", padding: "11px 24px", fontSize: "14px"}} onClick={(e) => scrollToSection(e, '#contact')}>{t('일본 비즈니스 문의하기', '日本ビジネス支援を相談する')}</a>
               </div>
@@ -676,7 +676,6 @@ export default function Home() {
               <div className="footer-section-title">{t('연락처', '連絡先')}</div>
               <ul className="footer-links">
                 <li><a href="mailto:sales@pnls.co.kr">sales@pnls.co.kr</a></li>
-                <li><a href="mailto:jp@pnls.co.kr"><span>{t('jp@pnls.co.kr (일본 비즈니스)', 'jp@pnls.co.kr (日本ビジネス)')}</span></a></li>
                 <li><a href="#contact" onClick={(e) => scrollToSection(e, '#contact')}>{t('서울특별시 금천구 가산디지털1로 226, 701호', 'ソウル特別市衿川区加山デジタル1路226、701号')}</a></li>
               </ul>
             </div>

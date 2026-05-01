@@ -1132,6 +1132,9 @@
 
   .tech-category-card:hover .tech-item-dot { color: var(--accent); }
 
+  @media (max-width: 1024px) { .tech-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 768px) { .tech-grid { grid-template-columns: 1fr; } }
+
   /* ──── FOOTER ──── */
   footer {
     background: var(--navy-950);
